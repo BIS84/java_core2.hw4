@@ -41,5 +41,22 @@ public class Main {
             }
             System.out.println(uniqueSubscriber + " - " + k);
         }
+
+        String[] phoneNumber = {"1234567891", "1234567892", "1234567893",
+                "1234567894", "1234567895", "1234567896", "1234567897",
+                "1234567898", "1234567899", "1234567900", "1234567901",
+                "1234567902", "1234567903", "1234567904", "1234567905"};
+
+
+        //task 2
+        PhoneBook phoneBook = new PhoneBook();
+
+        for(int i = 0; i < subscribers.length; i++) {
+            phoneBook.add(subscribers[i], phoneNumber[i]);
+        }
+
+        phoneBook.info();
+
+        System.out.println(phoneBook.getPhone("Petrov"));
     }
 }
